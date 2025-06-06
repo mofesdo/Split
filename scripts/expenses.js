@@ -36,3 +36,43 @@ function loadExpenses(expenses) {
     expensesList.appendChild(expenseLi);
   });
 }
+
+function addExpense(event) {
+  event.preventDefault();
+  console.log("adding expense...");
+}
+
+const addExpenseForm = document.getElementById("addExpense");
+
+const friendsArray = ["Modesto", "Abraham", "Bradley", "Jasmine"];
+const friendsSelect = document.getElementById("friends");
+
+addExpenseForm.addEventListener("submit", function (event) {
+  const expenses = JSON.parse(localStorage.getItem("expenses"));
+  console.log(expenses);
+  const formData = new FormData(event.target);
+  const expense = formData.get("expense");
+  const cost = formData.get("cost");
+  const payer = formData.get("payer");
+  const selectedFriends = Array.from(
+    document.querySelectorAll("input[name='friends']:checked")
+  ).map((opt) => opt.value);
+  expenses.push({ name: expense, cost, payer, friends: selectedFriends });
+  localStorage.setItem("expenses", JSON.stringify(expenses));
+});
+
+// Populate the checkbox inputs with array values
+friendsArray.forEach((friend) => {
+  const wrapper = document.createElement("div");
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.name = "friends";
+  checkbox.value = friend;
+  checkbox.id = `friend-${friend}`;
+  const label = document.createElement("label");
+  label.htmlFor = checkbox.id;
+  label.textContent = friend;
+  wrapper.appendChild(checkbox);
+  wrapper.appendChild(label);
+  friendsSelect.appendChild(wrapper);
+});
