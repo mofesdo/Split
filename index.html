@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/pages/index.css">
 </head>
 <body>
-    
+    <header class="header">
+        <h1 class="header__title">Splits</h1>
+        <p class="header__subtitle">A simple splits calculator for your store expenses</p>
+    </header>
+    <main class="main">
+        <div class="main__container">
+            <form class="form" id="splits-form">
+                <div class="form__group">
+                    <label for="total-expense" class="form__label">Total Expense</label>
+                    <input type="number" id="total-expense" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="num-people" class="form__label">Number of People</label>
+                    <input type="number" id="num-people" class="form__input" required>
+                </div>
+                <button type="submit" class="form__button">Calculate</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">Made by Team Splits</p>
+    </footer>
 </body>
 </html>
