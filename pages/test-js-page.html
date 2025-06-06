@@ -11,16 +11,40 @@
     
 
     <form id="test-form">
-        <label for="users">Input Field:</label>
-        <select id="users" name="users" required>
-            <option value="">Select</option>
-            <option value="Ace">Ace</option>
-            <option value="Modesto">Modesto</option>
-            <option value="Jasmine">Jasmine</option>
-            <option value="Bradley">Bradley</option>
-        </select>
+        <label for="expense-type">Expense type:
+            <input type="text" id="expense-type" name="expense-type" required>
+        </label>
+        <label for="users">Payer:</label>
+            <select id="users" name="users" required>
+                <option value="">Select</option>
+                <option value="Ace">Ace</option>
+                <option value="Modesto">Modesto</option>
+                <option value="Jasmine">Jasmine</option>
+                <option value="Bradley">Bradley</option>
+            </select>
+        </label>
+        <label for="amount">Amount of expenses paid:
+            <input type="number" id="amount" name="amount" required>
+        </label>
         <button type="submit">Submit</button>
+        <label for="users">Who else is coming?</label>
+            <select id="users" name="users" required>
+                <option value="">Select</option>
+                <option value="Ace">Ace</option>
+                <option value="Modesto">Modesto</option>
+                <option value="Jasmine">Jasmine</option>
+                <option value="Bradley">Bradley</option>
+            </select>
+        </label>
+        <button type="button" id="adduser">Add User</button>
     </form>
+    <div id="result">
+        <h2>Result</h2>
+        <p id="result-text">Friends:</p>
+        <template id="result-template">
+            <p class="result-item"></p>
+        </template>
+    </div>
     <script src="../index.js"></script>
 </body>
 </html>
