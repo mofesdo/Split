@@ -27,34 +27,25 @@
           </div>
         </header>
         <main class="main">
-          <div class="main__container">
-            <form class="form" id="splits-form">
-              <div class="form__group">
-                <label for="total-expense" class="form__label"
-                  >Total Expense</label
-                >
-                <input
-                  type="number"
-                  id="total-expense"
-                  class="form__input"
-                  required
-                />
-              </div>
-              <div class="form__group">
-                <label for="num-people" class="form__label"
-                  >Number of People</label
-                >
-                <input
-                  type="number"
-                  id="num-people"
-                  class="form__input"
-                  required
-                />
-              </div>
-              <button type="submit" class="form__button">Calculate</button>
-            </form>
-            <div id="result" class="result"></div>
-          </div>
+          <section class="sidebar">
+            <button class="sidebar__add-button" type="button">
+              Add a new trip
+            </button>
+            <span class="sidebar__border"></span>
+          </section>
+          <section class="trips">
+            <h2 class="trip__title">Your Trips</h2>
+            <ul class="trip__info">
+              <li class="trip__name">Mexico</li>
+              <ul class="trip__expenses" id="expensesList">
+                <li class="trip__expenses-name">Hotel</li>
+                <li class="trip__expenses-cost">$1000</li>
+                <li class="trip__expenses-payer">Paid by: Jasmine</li>
+                <li class="trip__expenses-friends"></li>
+              </ul>
+              <li class="trip__total">Total cost: $2000</li>
+            </ul>
+          </section>
         </main>
         <footer class="footer">
           <p class="footer__text">Made by Team Splits</p>
