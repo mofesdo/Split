@@ -2,9 +2,21 @@
   background-color: #f8f9fa;
   padding: 20px;
   text-align: center;
-  font-family: Arial, sans-serif;
+  /* font-family: 'Athiti', 'Helvetica Neue', Arial, sans-serif; */
   display: flex;
   justify-content: space-between;
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.header__column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .header__title {
