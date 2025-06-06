@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Test JS Page</h1>
-    <p>This is a test page to check the JavaScript functionality.</p>
+    <p>This is a test page to check the JavaScript functionality for calculating expenses.</p>
     
 
     <form id="test-form">
@@ -27,9 +27,9 @@
             <input type="number" id="amount" name="amount" required>
         </label>
         <button type="submit">Submit</button>
-        <label for="users">Who else is coming?</label>
-            <select id="users" name="users" required>
-                <option value="">Select</option>
+        <label for="extra-users">Who else is coming?</label>
+            <select id="extra-users" name="extra-users">
+                <!-- <option value="">None</option> -->
                 <option value="Ace">Ace</option>
                 <option value="Modesto">Modesto</option>
                 <option value="Jasmine">Jasmine</option>
@@ -38,13 +38,21 @@
         </label>
         <button type="button" id="adduser">Add User</button>
     </form>
+    <div id="user-list">
+        <h3>Who else pays:</h3>
+        <ul id="users-list">
+          <template id="added-user-template">
+            <li class="added-user"></li>
+          </template>
+        </ul>
+    </div>
     <div id="result">
         <h2>Result</h2>
-        <p id="result-text">Friends:</p>
         <template id="result-template">
-            <p class="result-item"></p>
+            <p class="result-title"></p>
+            <p class="result-content"></p>
         </template>
     </div>
-    <script src="../index.js"></script>
+    <script src="../test-index.js"></script>
 </body>
 </html>
