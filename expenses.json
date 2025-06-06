@@ -1,3 +1,16 @@
-[{
-    
-}]
+{
+  "expenses": [
+    {
+      "name": "Hotel",
+      "cost": 1000,
+      "payer": "Modesto",
+      "friends": ["Bradley", "Jasmine"]
+    },
+    {
+      "name": "Uber",
+      "cost": 40,
+      "payer": "Bradley",
+      "friends": ["Modesto", "Jasmine"]
+    }
+  ]
+}
