@@ -1,12 +1,24 @@
 .header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__title {
-    color: #343a40;
-    font-size: 2.5em;
-    margin: 0;
+  color: #343a40;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.header__user-container {
+  display: flex;
+  gap: 20px;
+}
+
+.header__user-avatar {
+  width: 50px;
+  height: 50px;
 }

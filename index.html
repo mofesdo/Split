@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/pages/index.css">
-</head>
-<body>
-    <header class="header">
-        <h1 class="header__title">Splits</h1>
-        <p class="header__subtitle">A simple splits calculator for your store expenses</p>
-    </header>
-    <main class="main">
-        <div class="main__container">
+    <link rel="stylesheet" href="pages/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="page__content">
+        <header class="header">
+          <div>
+            <h1 class="header__title">Splits</h1>
+            <p class="header__subtitle">
+              A simple splits calculator for your store expenses
+            </p>
+            <img src="" alt="" class="header__logo" />
+          </div>
+          <div class="header__user-container">
+            <p class="header__user-name">Modesto</p>
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.GEMebRHdnyW_EAnpT36DSwAAAA&pid=Api&h=220&P=0"
+              alt="the letter M"
+              class="header__user-avatar"
+            />
+          </div>
+        </header>
+        <main class="main">
+          <div class="main__container">
             <form class="form" id="splits-form">
-                <div class="form__group">
-                    <label for="total-expense" class="form__label">Total Expense</label>
-                    <input type="number" id="total-expense" class="form__input" required>
-                </div>
-                <div class="form__group">
-                    <label for="num-people" class="form__label">Number of People</label>
-                    <input type="number" id="num-people" class="form__input" required>
-                </div>
-                <button type="submit" class="form__button">Calculate</button>
+              <div class="form__group">
+                <label for="total-expense" class="form__label"
+                  >Total Expense</label
+                >
+                <input
+                  type="number"
+                  id="total-expense"
+                  class="form__input"
+                  required
+                />
+              </div>
+              <div class="form__group">
+                <label for="num-people" class="form__label"
+                  >Number of People</label
+                >
+                <input
+                  type="number"
+                  id="num-people"
+                  class="form__input"
+                  required
+                />
+              </div>
+              <button type="submit" class="form__button">Calculate</button>
             </form>
             <div id="result" class="result"></div>
-        </div>
-    </main>
-    <footer class="footer">
-        <p class="footer__text">Made by Team Splits</p>
-    </footer>
-</body>
+          </div>
+        </main>
+        <footer class="footer">
+          <p class="footer__text">Made by Team Splits</p>
+          <p class="footer__data">2025</p>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/Split/index.js"></script>
+  </body>
 </html>
