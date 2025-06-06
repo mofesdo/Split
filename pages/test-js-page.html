@@ -11,18 +11,15 @@
     
 
     <form id="test-form">
-        <label for="input-field">Input Field:</label>
-        <input type="text" id="input-field" name="input-field" required>
+        <label for="users">Input Field:</label>
+        <select id="users" name="users" required>
+            <option value="">Select</option>
+            <option value="Ace">Ace</option>
+            <option value="Modesto">Modesto</option>
+            
+        </select>
         <button type="submit">Submit</button>
     </form>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('JavaScript is working!');
-        });
-    </script>
-    
-    <footer>
-        <p>Footer content goes here.</p>
-    </footer>
+    <script src="../index.js"></script>
 </body>
 </html>
