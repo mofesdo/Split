@@ -53,7 +53,7 @@ modalCloseButtons.forEach((button) => {
 const escapeModal = (e) => {
   if (e.key === "Escape") {
     const activeModal = document.querySelector(".modal_opened");
-    // closeModal(activeModal);
+    closeModal(activeModal);
   }
 };
 
@@ -61,7 +61,7 @@ const escapeModal = (e) => {
 modals.forEach((modal) => {
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
-      console.log(e);
+      closeModal(modal);
     }
   });
 });
