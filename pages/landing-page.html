@@ -26,8 +26,8 @@
             <h1 class="header__title">Split</h1>
           </div>
           <div class="header__login-container">
-            <button class="header__signup">Sign up</button>
-            <button class="header__signin">Log in</button>
+            <button class="header__signup-button" type="button">Sign up</button>
+            <button class="header__signin-button" type="button">Log in</button>
           </div>
         </div>
         <main class="main main_type_landing-page">
@@ -49,6 +49,90 @@
           <p class="footer_date">2025</p>
         </footer>
       </div>
+      <div class="modal" id="signup-modal">
+        <div class="modal__container">
+          <button class="modal__close-button" type="button"></button>
+          <h2 class="modal__title">Sign up</h2>
+          <form class="modal__form" id="signup-form">
+            <label for="signup-name" class="modal__label">
+              Name
+              <input
+                id="signup-name"
+                type="text"
+                required
+                minlength="2"
+                maxlength="30"
+                placeholder="Enter your name"
+                class="modal__input"
+              />
+            </label>
+            <label for="signup-email" class="modal__label">
+              Email
+              <input
+                id="signup-email"
+                type="email"
+                required
+                minlength="2"
+                maxlength="30"
+                placeholder="Enter your email"
+                class="modal__input"
+              />
+            </label>
+            <label for="signup-password" class="modal__label">
+              Password
+              <input
+                id="signup-password"
+                type="password"
+                required
+                minlength="8"
+                placeholder="Enter a password"
+                class="modal__input"
+              />
+            </label>
+            <label for="signup-avatar" class="modal__label">
+              Avatar Url
+              <input
+                id="signup-avatar"
+                type="url"
+                required
+                placeholder="Enter an image Url for your avatar"
+                class="modal__input"
+              />
+            </label>
+            <button class="modal__submit-button" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="modal" id="signin-modal">
+          <div class="modal__container">
+            <button class="modal__close-button" type="button"></button>
+            <h2 class="modal__title">Log in</h2>
+            <form class="modal__form" id="add-trip-form">
+              <label for="signin-email" class="modal__label">
+                Email
+                <input
+                  id="signin-email"
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  class="modal__input"
+                />
+              </label>
+              <label for="signin-password" class="modal__label">
+                Password
+                <input
+                  id="signin-password"
+                  type="text"
+                  required
+                  placeholder="Enter your password"
+                  class="modal__input"
+                />
+              </label>
+              <button class="modal__submit-button" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
+    <script type="module" src="../test-modal.js"></script>
   </body>
 </html>
