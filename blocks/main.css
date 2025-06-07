@@ -1,6 +1,8 @@
 .main {
   flex: 1 0 auto;
   padding-top: 20px;
+  background-color: rgb(248, 249, 250, .3);
+  display: flex;
 }
 
 .main_type_landing-page {
