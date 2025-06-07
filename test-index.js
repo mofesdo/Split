@@ -12,12 +12,6 @@ const amount = form.elements["amount"]
 
 let userListArray = []
 
-
-
-// payer = prompt("Who is paying? (Modesto, Ace, Bradley, Jasmine)")
-
-// amount = prompt("What is the amount? (in dollars)")
-
 addUser.addEventListener("click", (e) => {
     e.preventDefault()
     console.log("Adding user...")
