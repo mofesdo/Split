@@ -1,5 +1,12 @@
 .sidebar {
-  border-right: 1px solid black;
   display: flex;
-  flex-direction: column;
+}
+
+.sidebar__border {
+  border-right: 1px solid black;
+  flex-grow: 1;
+}
+
+.sidebar__add-button {
+  display: block;
 }
