@@ -7,8 +7,23 @@
   justify-content: space-between;
 }
 
+.header_type_landing-page {
+  background: transparent;
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__logo {
+  width: 30px;
+  height: 30px;
+}
+
 .header__title {
-  color: #343a40;
+  color: #ffffff;
   font-size: 2.5em;
   margin: 0;
 }
@@ -21,4 +36,39 @@
 .header__user-avatar {
   width: 50px;
   height: 50px;
+}
+
+.header__login-container {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  gap: 20px;
+}
+
+.header__signup {
+  width: 130px;
+  height: 45px;
+  background-color: #2b2a2a;
+  color: white;
+  border-radius: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header__signin {
+  width: 130px;
+  height: 45px;
+  background-color: #2b2a2a;
+  color: white;
+  border-radius: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header__signup:hover {
+  opacity: 0.7;
+}
+
+.header__signin:hover {
+  opacity: 0.7;
 }

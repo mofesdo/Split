@@ -1,0 +1,30 @@
+.description {
+  width: 740px;
+  height: 320px;
+  background-color: rgba(217, 217, 217, 0.4);
+  text-align: center;
+  align-content: center;
+  border-radius: 20px;
+}
+
+.description__container {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  color: #121111;
+  gap: 20px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.description__text-one {
+  margin: 0;
+}
+
+.description__text-two {
+  margin: 0;
+}
+
+.description__text-three {
+  margin: 0;
+}

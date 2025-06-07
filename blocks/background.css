@@ -1,0 +1,24 @@
+.background-layer {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.background-layer__image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-layer__image_one {
+  background-image: url(../images/wine-glass-min.jpg);
+}
+
+.background-layer__image_two {
+  background-image: url(../images/pool-side-min.jpg);
+}
+
+.background-layer__image_three {
+  background-image: url(../images/airplane-min.jpg);
+}

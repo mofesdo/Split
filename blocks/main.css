@@ -1,7 +1,16 @@
 .main {
   flex: 1 0 auto;
+  padding-top: 20px;
+}
+
+.main_type_landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__content {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 20px;
-  padding-top: 20px;
 }
