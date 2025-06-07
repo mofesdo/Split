@@ -44,24 +44,24 @@ if (signinButton) {
 
 //close any modal with x button
 modalCloseButtons.forEach((button) => {
-  const popup = button.closest(".modal");
-  popup.addEventListener("click", () => {
-    closeModal(popup);
+  const modal = button.closest(".modal");
+  button.addEventListener("click", () => {
+    closeModal(modal);
   });
 });
 
 const escapeModal = (e) => {
   if (e.key === "Escape") {
     const activeModal = document.querySelector(".modal_opened");
-    closeModal(activeModal);
+    // closeModal(activeModal);
   }
 };
 
 //close any modal on overlay click
 modals.forEach((modal) => {
   modal.addEventListener("click", (e) => {
-    if (!e.target.closest(".modal__container")) {
-      closeModal(modal);
+    if (e.target === modal) {
+      console.log(e);
     }
   });
 });
