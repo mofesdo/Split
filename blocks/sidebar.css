@@ -1,9 +1,8 @@
 .sidebar {
-  border-right: 1px solid black;
   display: flex;
-  flex-direction: column;
 }
 
+<<<<<<< HEAD
 .sidebar__add-button {
   width: 130px;
   height: 45px;
@@ -14,3 +13,13 @@
   cursor: pointer;
   margin: 20px;
 }
+=======
+.sidebar__border {
+  border-right: 1px solid black;
+  flex-grow: 1;
+}
+
+.sidebar__add-button {
+  display: block;
+}
+>>>>>>> styles
