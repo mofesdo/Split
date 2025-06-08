@@ -1,0 +1,24 @@
+.trip {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 250px;
+  height: 80px;
+  align-content: center;
+}
+
+.trip__info {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.trip__name {
+  margin: 0 0 10px;
+}
+
+.trip__location {
+  margin: 0;
+}
+.trip__title {
+    margin: 0;
+}

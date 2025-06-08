@@ -12,7 +12,11 @@
         <header class="header">
           <div>
             <div class="header__column">
-              <img src="./images/logo.svg" alt="Header logo" class="header__logo" />
+              <img
+                src="./images/logo.svg"
+                alt="Header logo"
+                class="header__logo"
+              />
               <h1 class="header__title">Splits</h1>
             </div>
             <p class="header__subtitle">
@@ -29,6 +33,7 @@
           </div>
         </header>
         <main class="main">
+<<<<<<< HEAD
           <section class="sidebar">
             <button class="sidebar__add-button" type="button">
               Add a new trip
@@ -36,20 +41,41 @@
             <span class="sidebar__border"></span>
           </section>
           <section class="trips">
-            <h2 class="trip__title">Your Trips</h2>
-            <div class="trip__card">
-              <ul class="trip__info">
-                <li class="trip__name">Name: Summer Vacation</li>
-                <!-- <ul class="trip__expenses" id="expensesList">
-                  <li class="trip__expenses-name">Hotel</li>
-                  <li class="trip__expenses-cost">$1000</li>
-                  <li class="trip__expenses-payer">Paid by: Jasmine</li>
-                  <li class="trip__expenses-friends"></li>
-                </ul> -->
-                <li class="trip__location">Location: Mexico</li>
-              </ul>
-            </div>
+            <h2 class="trips__title">Your Trips</h2>
+            <ul class="trips__list">
+              <template id="trip-template">
+                <li class="trip">
+                  <div class="trip__info">
+                    <p class="trip__name"></p>
+                    <p class="trip__location"></p>
+                  </div>
+                </li>
+              </template>
+            </ul>
           </section>
+=======
+            <section class="sidebar">
+              <button class="sidebar__add-button" type="button">
+                Add a new trip
+              </button>
+              <span class="sidebar__border"></span>
+            <!-- </section>
+            <section class="trips"> -->
+              <h2 class="trip__title">Your Trips</h2>
+              <div class="trip__card">
+                <ul class="trip__info">
+                  <li class="trip__name">Name: Summer Vacation</li>
+                  <!-- <ul class="trip__expenses" id="expensesList">
+                    <li class="trip__expenses-name">Hotel</li>
+                    <li class="trip__expenses-cost">$1000</li>
+                    <li class="trip__expenses-payer">Paid by: Jasmine</li>
+                    <li class="trip__expenses-friends"></li>
+                  </ul> -->
+                  <li class="trip__location">Location: Mexico</li>
+                </ul>
+              </div>
+            </section>
+>>>>>>> styles
         </main>
         <footer class="footer">
           <p class="footer__text">Made by Team Splits</p>
