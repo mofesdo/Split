@@ -28,7 +28,6 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-
   animation: fadeIn 0.6s ease-in-out, slideUp 0.6s ease-in-out;
 }
 
