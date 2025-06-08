@@ -5,6 +5,9 @@ const modalCloseButtons = document.querySelectorAll(".modal__close-button");
 //selectors for add trip modal
 const addTripButton = document.querySelector(".sidebar__add-button");
 const addTripModal = document.querySelector("#add-trip-modal");
+const tripNameInput = addTripModal.querySelector("#trip-name");
+const tripLocationInput = addTripModal.querySelector("#trip-location");
+const addTripForm = document.forms["add-trip-form"];
 
 //selectors for signup modal
 const signupModal = document.querySelector("#signup-modal");
@@ -13,6 +16,10 @@ const signupButton = document.querySelector(".header__signup-button");
 //selectors for signin modal
 const signinModal = document.querySelector("#signin-modal");
 const signinButton = document.querySelector(".header__signin-button");
+
+//selectors for trips section
+const tripsList = document.querySelector(".trips__list");
+const tripTemplate = document.querySelector("#trip-template");
 
 const openModal = (modal) => {
   modal.classList.add("modal_opened");
@@ -40,6 +47,28 @@ if (signinButton) {
   signinButton.addEventListener("click", () => {
     openModal(signinModal);
   });
+}
+
+//submit function for adding a new trip to trips list
+const handleAddTripSubmit = (e) => {
+  e.preventDefault();
+
+  const trip = tripTemplate.content.querySelector(".trip").cloneNode(true);
+  const tripName = tripNameInput.value;
+  const tripLocation = tripLocationInput.value;
+
+  trip.querySelector(".trip__name").textContent = `Name: ${tripName}`;
+  trip.querySelector(
+    ".trip__location"
+  ).textContent = `Location ${tripLocation}`;
+
+  tripsList.prepend(trip);
+  addTripForm.reset();
+  closeModal(addTripModal);
+};
+
+if (addTripForm) {
+  addTripForm.addEventListener("submit", handleAddTripSubmit);
 }
 
 //close any modal with x button
