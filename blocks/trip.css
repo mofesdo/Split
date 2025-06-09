@@ -20,6 +20,12 @@
   gap: 10px;
   background-color: #fff;
   border-radius: 16px;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
+}
+
+.trip__card:hover {
+  scale: 1.05;
 }
 
 .trip__card_text {
