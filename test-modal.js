@@ -5,9 +5,8 @@ const modalCloseButtons = document.querySelectorAll(".modal__close-button");
 //selectors for add trip modal
 const addTripButton = document.querySelector(".sidebar__add-button");
 const addTripModal = document.querySelector("#add-trip-modal");
-console.log(addTripModal);
-const tripNameInput = addTripModal.querySelector("#trip-name");
-const tripLocationInput = addTripModal.querySelector("#trip-location");
+const tripNameInput = document.querySelector("#trip-name");
+const tripLocationInput = document.querySelector("#trip-location");
 const addTripForm = document.forms["add-trip-form"];
 
 //selectors for signup modal
