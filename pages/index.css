@@ -8,6 +8,8 @@
 @import url(../blocks/sidebar.css);
 @import url(../blocks/trips.css);
 @import url(../blocks/trip.css);
+@import url(../blocks/expense.css);
+@import url(../blocks/result.css);
 @import url(../blocks/description.css);
 @import url(../blocks/modal.css);
-@import url(../blocks/trip.css);
+/* @import url(../blocks/trip.css); */

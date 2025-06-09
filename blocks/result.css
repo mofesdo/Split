@@ -1,0 +1,14 @@
+.result {
+  margin-left: 100px;
+}
+
+.result__list-title {
+  color: #121212;
+  font-size: 30px;
+  margin: 50px 0 100px;
+}
+
+.result__list {
+  color: #121212;
+  font-size: 24px;
+}

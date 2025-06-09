@@ -12,44 +12,94 @@
         <header class="header">
           <h2 class="header__title">Add Expenses</h2>
         </header>
-        <main class="main">
+        <main class="main main_type_expenses">
           <section class="expense">
-            <form class="expense__form" id="addExpense">
-              <label class="expense__label" for="expense">Expense Name:</label
-              ><input
-                type="text"
-                placeholder="Expense Name"
-                name="expense"
-                class="expense__input"
-                required
-              />
-              <label class="expense__label" for="cost">Cost: </label>
-              <input
-                class="expense__input"
-                type="text"
-                placeholder="Cost"
-                name="cost"
-                required
-              />
-              <label class="expense__label" for="payer">Paid By: </label>
-              <input
-                class="expense__input"
-                type="text"
-                placeholder="Paid By"
-                name="payer"
-                required
-              />
-              <label class="expense__label" for="friends">Owed By: </label>
-              <div
-                class="expense__friends"
-                id="friends"
-                multiple
-                required
-              ></div>
-              <input class="expense__input" type="submit" value="submit" />
+            <form class="expense__form" id="test-form">
+              <div class="expense__form-container">
+                <div class="expense__column-one">
+                  <label class="expense__label" for="expense-type"
+                    >Expense name:
+                    <input
+                      type="text"
+                      id="expense-type"
+                      name="expense-type"
+                      class="expense__input"
+                      required
+                    />
+                  </label>
+                  <label class="expense__label" for="amount"
+                    >Cost:
+                    <input
+                      class="expense__input"
+                      type="number"
+                      id="amount"
+                      name="amount"
+                      required
+                    />
+                  </label>
+                </div>
+                <div class="expense__column-two">
+                  <label class="expense__label" for="users"
+                    >Paid by:
+                    <select
+                      class="expense__input-select"
+                      id="users"
+                      name="users"
+                      required
+                    >
+                      <option value="">Select</option>
+                      <option value="Ace">Ace</option>
+                      <option value="Modesto">Modesto</option>
+                      <option value="Jasmine">Jasmine</option>
+                      <option value="Bradley">Bradley</option>
+                    </select>
+                  </label>
+
+                  <label class="expense__label" for="extra-users"
+                    >Other payers:
+                    <select
+                      class="expense__input-select"
+                      id="extra-users"
+                      name="extra-users"
+                    >
+                      <!-- <option value="">None</option> -->
+                      <option value="Ace">Ace</option>
+                      <option value="Modesto">Modesto</option>
+                      <option value="Jasmine">Jasmine</option>
+                      <option value="Bradley">Bradley</option>
+                    </select>
+                  </label>
+                </div>
+                <button
+                  class="expense__add-user-button"
+                  type="button"
+                  id="adduser"
+                >
+                  Add User
+                </button>
+              </div>
+              <button class="expense__submit-button" type="submit">
+                Submit
+              </button>
             </form>
+            <div class="expense__users" id="user-list">
+              <h3 class="expense__users-title">Who else pays:</h3>
+              <ul class="expense__users-list" id="users-list">
+                <template id="added-user-template">
+                  <li class="added-user"></li>
+                </template>
+              </ul>
+            </div>
           </section>
-          <section class="results"></section>
+          <section class="result">
+            <div class="result__list" id="result">
+              <h2 class="result__list-title">Trip expenses</h2>
+              <template id="result-template">
+                <p class="result-title"></p>
+                <p class="result-content"></p>
+              </template>
+            </div>
+          </section>
         </main>
         <footer class="footer">
           <p class="footer__text">Made by team splits</p>
@@ -57,6 +107,6 @@
         </footer>
       </div>
     </div>
-    <!-- <script src="../scripts/expenses.js"></script> -->
+    <script src="../test-index.js"></script>
   </body>
 </html>
