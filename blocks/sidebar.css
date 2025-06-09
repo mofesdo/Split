@@ -10,8 +10,14 @@
   border-radius: 10px;
   padding: 0;
   cursor: pointer;
-  margin: 20px;
+  border: none;
+  transition: scale 0.2s ease-in-out;
 }
+
+.sidebar__add-button:hover {
+  scale: 1.05;
+}
+
 .sidebar__border {
   border-right: 1px solid black;
   flex-grow: 1;

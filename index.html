@@ -32,45 +32,28 @@
             />
           </div>
         </header>
-        <main class="main">
-          <section class="sidebar">
-            <button class="sidebar__add-button" type="button">
-              Add a new trip
-            </button>
-            <span class="sidebar__border"></span>
-          </section>
-          <section class="trips">
-            <h2 class="trips__title">Your Trips</h2>
-            <ul class="trips__list">
-              <template id="trip-template">
-                <li class="trip">
-                  <div class="trip__info">
-                    <p class="trip__name"></p>
-                    <p class="trip__location"></p>
-                  </div>
-                </li>
-              </template>
-            </ul>
-          </section>
-            <section class="sidebar">
-              <button class="sidebar__add-button" type="button">
-                Add a new trip
-              </button>
-              <span class="sidebar__border"></span>
-            <!-- </section>
-            <section class="trips"> -->
+        <main class="main main_type_dashboard">
+            <section class="trips">
+              <div class="trips__header">
+                <h2 class="trips__title">Trips</h2>
+                <button class="sidebar__add-button" type="button">
+                  Add a new trip
+                </button>
+              </div>
               <h2 class="trip__title">Your Trips</h2>
-              <div class="trip__card">
-                <ul class="trip__info">
-                  <li class="trip__name">Name: Summer Vacation</li>
-                  <!-- <ul class="trip__expenses" id="expensesList">
-                    <li class="trip__expenses-name">Hotel</li>
-                    <li class="trip__expenses-cost">$1000</li>
-                    <li class="trip__expenses-payer">Paid by: Jasmine</li>
-                    <li class="trip__expenses-friends"></li>
-                  </ul> -->
-                  <li class="trip__location">Location: Mexico</li>
-                </ul>
+              <div class="trips__grid">
+                <div class="trip__card">
+                  <p class="trip__card_text">Name: Summer Vacation</p>
+                  <p class="trip__card_text">Location: Summer Vacation</p>
+                </div>
+                <div class="trip__card">
+                  <p class="trip__card_text">Name: Family Reunion</p>
+                  <p class="trip__card_text">Location: Wisconsin</p>
+                </div>
+                <div class="trip__card">
+                  <p class="trip__card_text">Name: Christmas Holiday</p>
+                  <p class="trip__card_text">Location: Chicago</p>
+                </div>
               </div>
             </section>
         </main>

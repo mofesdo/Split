@@ -17,8 +17,6 @@
 }
 
 .main {
-  flex: 1 0 auto;
-  border-top: 1px solid black;
   background-color: rgb(248, 249, 250, 0.3);
   display: flex;
   gap: 20px;
@@ -30,5 +28,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  border: none;
   animation: fadeIn 0.6s ease-in-out, slideUp 0.6s ease-in-out;
+  padding: 60px 80px;
+  height: 60vh;
+}
+
+.main_type_dashboard {
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
 }

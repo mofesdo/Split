@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   flex-shrink: 0;
-  padding-bottom: 20px;
+  padding: 80px 20px;
 }
 
 .footer__text {
@@ -12,4 +12,5 @@
 
 .footer__date {
   margin: 0;
+  color: #fff;
 }
