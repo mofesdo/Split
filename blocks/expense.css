@@ -1,0 +1,54 @@
+.expense {
+  display: flex;
+  padding: 20px;
+}
+
+.expense__column-one {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 300px;
+  gap: 16px;
+}
+
+.expense__column-two {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.expense__form-container {
+  display: flex;
+}
+
+.expense__input-select {
+  width: 184px;
+}
+
+.expense__submit-button {
+  margin: 10px 0 0 115px;
+}
+
+.expense__users-title {
+  margin: 0;
+}
+
+.expense__add-user-button {
+  margin: 0 10px;
+  height: 29px;
+  align-self: flex-end;
+}
+
+.expense__users {
+  display: flex;
+}
+
+.expense__users-list {
+  list-style-type: none;
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  gap: 20px;
+}

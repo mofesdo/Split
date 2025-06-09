@@ -35,6 +35,11 @@
   height: 60vh;
 }
 
+.main_type_expenses {
+  display: flex;
+  flex-direction: column;
+}
+
 .main_type_dashboard {
   flex-direction: column;
   padding: 20px;
