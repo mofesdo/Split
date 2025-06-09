@@ -20,6 +20,7 @@
   background-color: rgb(248, 249, 250, 0.3);
   display: flex;
   gap: 20px;
+  flex: 1 0 auto; /* used for sticky footer to keep it at the bottom of the page */
   border-radius: 8px;
 }
 

@@ -33,35 +33,35 @@
           </div>
         </header>
         <main class="main main_type_dashboard">
-            <section class="trips">
-              <div class="trips__header">
-                <h2 class="trips__title">Trips</h2>
-                <button class="sidebar__add-button" type="button">
-                  Add a new trip
-                </button>
+          <section class="trips">
+            <div class="trips__header">
+              <h2 class="trips__title">Trips</h2>
+              <button class="sidebar__add-button" type="button">
+                Add a new trip
+              </button>
+            </div>
+            <h2 class="trip__title">Your Trips</h2>
+            <div class="trips__grid">
+              <div class="trip__card">
+                <p class="trip__card_name">Name: Summer Vacation</p>
+                <p class="trip__card_location">Location: Summer Vacation</p>
               </div>
-              <h2 class="trip__title">Your Trips</h2>
-              <div class="trips__grid">
-                <div class="trip__card">
-                  <p class="trip__card_text">Name: Summer Vacation</p>
-                  <p class="trip__card_text">Location: Summer Vacation</p>
-                </div>
-                <div class="trip__card">
-                  <p class="trip__card_text">Name: Family Reunion</p>
-                  <p class="trip__card_text">Location: Wisconsin</p>
-                </div>
-                <div class="trip__card">
-                  <p class="trip__card_text">Name: Christmas Holiday</p>
-                  <p class="trip__card_text">Location: Chicago</p>
-                </div>
-                <template id="trip__card_template">
-                  <div class="trip__card">
-                    <p class="trip__card_text">Name: </p>
-                    <p class="trip__card_text">Location: </p>
-                  </div>
-                </template>
+              <div class="trip__card">
+                <p class="trip__card_name">Name: Family Reunion</p>
+                <p class="trip__card_location">Location: Wisconsin</p>
               </div>
-            </section>
+              <div class="trip__card">
+                <p class="trip__card_name">Name: Christmas Holiday</p>
+                <p class="trip__card_location">Location: Chicago</p>
+              </div>
+              <template id="trip__card_template">
+                <div class="trip__card">
+                  <p class="trip__card_name">Name:</p>
+                  <p class="trip__card_location">Location:</p>
+                </div>
+              </template>
+            </div>
+          </section>
         </main>
         <footer class="footer">
           <p class="footer__text">Made by Team Splits</p>

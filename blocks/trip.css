@@ -28,14 +28,19 @@
   scale: 1.05;
 }
 
-.trip__card_text {
+.trip__card_name {
+  font-size: 14px;
+  color: #141414;
+  margin: 0;
+}
+
+.trip__card_location {
   font-size: 14px;
   color: #141414;
   margin: 0;
 }
 
 .trip__title {
-    margin: 0;
-    padding-top: 10px;
-    
+  margin: 0;
+  padding-top: 10px;
 }
