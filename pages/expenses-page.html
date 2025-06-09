@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Trip expenses</title>
+  </head>
+  <body>
+    <div class="page page_type_expenses">
+      <div class="page__content">
+        <header class="header">
+          <h2 class="header__title">Add Expenses</h2>
+        </header>
+        <main class="main">
+          <section class="expense">
+            <form class="expense__form" id="addExpense">
+              <label class="expense__label" for="expense">Expense Name:</label
+              ><input
+                type="text"
+                placeholder="Expense Name"
+                name="expense"
+                class="expense__input"
+                required
+              />
+              <label class="expense__label" for="cost">Cost: </label>
+              <input
+                class="expense__input"
+                type="text"
+                placeholder="Cost"
+                name="cost"
+                required
+              />
+              <label class="expense__label" for="payer">Paid By: </label>
+              <input
+                class="expense__input"
+                type="text"
+                placeholder="Paid By"
+                name="payer"
+                required
+              />
+              <label class="expense__label" for="friends">Owed By: </label>
+              <div
+                class="expense__friends"
+                id="friends"
+                multiple
+                required
+              ></div>
+              <input class="expense__input" type="submit" value="submit" />
+            </form>
+          </section>
+          <section class="results"></section>
+        </main>
+        <footer class="footer">
+          <p class="footer__text">Made by team splits</p>
+          <p class="footer__date">2025</p>
+        </footer>
+      </div>
+    </div>
+    <!-- <script src="../scripts/expenses.js"></script> -->
+  </body>
+</html>

@@ -18,8 +18,8 @@ const signinModal = document.querySelector("#signin-modal");
 const signinButton = document.querySelector(".header__signin-button");
 
 //selectors for trips section
-const tripsList = document.querySelector(".trips__list");
-const tripTemplate = document.querySelector("#trip-template");
+const tripsGrid = document.querySelector(".trips__grid");
+const tripTemplate = document.querySelector("#trip__card_template");
 
 const openModal = (modal) => {
   modal.classList.add("modal_opened");
@@ -53,16 +53,18 @@ if (signinButton) {
 const handleAddTripSubmit = (e) => {
   e.preventDefault();
 
-  const trip = tripTemplate.content.querySelector(".trip").cloneNode(true);
+  const trip = tripTemplate.content
+    .querySelector(".trip__card")
+    .cloneNode(true);
   const tripName = tripNameInput.value;
   const tripLocation = tripLocationInput.value;
 
-  trip.querySelector(".trip__name").textContent = `Name: ${tripName}`;
+  trip.querySelector(".trip__card_name").textContent = `Name: ${tripName}`;
   trip.querySelector(
-    ".trip__location"
+    ".trip__card_location"
   ).textContent = `Location ${tripLocation}`;
 
-  tripsList.prepend(trip);
+  tripsGrid.prepend(trip);
   addTripForm.reset();
   closeModal(addTripModal);
 };
