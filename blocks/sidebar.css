@@ -14,6 +14,22 @@
   transition: scale 0.2s ease-in-out;
 }
 
+.sidebar__logout-button {
+  width: 130px;
+  height: 45px;
+  background-color: #2b2a2a;
+  color: white;
+  border-radius: 10px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  transition: scale 0.2s ease-in-out;
+}
+
+.sidebar__logout-button:hover {
+  scale: 1.05;
+}
+
 .sidebar__add-button:hover {
   scale: 1.05;
 }

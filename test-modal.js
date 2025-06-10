@@ -21,6 +21,15 @@ const signinButton = document.querySelector(".header__signin-button");
 const tripsGrid = document.querySelector(".trips__grid");
 const tripTemplate = document.querySelector("#trip__card_template");
 
+//selectors for signing up and signing in and logging out
+const signupForm = document.querySelector("#signup-form");
+const signinForm = document.querySelector("#signin-form");
+const signupEmailInput = document.querySelector("#signup-email");
+const signupPasswordInput = document.querySelector("#signup-password");
+const signinEmailInput = document.querySelector("#signin-email");
+const singinPasswordInput = document.querySelector("#signin-password");
+const logoutButton = document.querySelector(".sidebar__logout-button");
+
 const openModal = (modal) => {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", escapeModal);
@@ -30,6 +39,58 @@ const closeModal = (modal) => {
   modal.classList.remove("modal_opened");
   document.removeEventListener("keydown", escapeModal);
 };
+
+const signOut = () => {
+  localStorage.removeItem("currentUser");
+  window.location.href = "/pages/landing-page.html";
+};
+
+if (logoutButton) {
+  logoutButton.addEventListener("click", signOut);
+}
+
+if (signupForm) {
+  signupForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = signupEmailInput.value;
+    const password = signupPasswordInput.value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    if (users.some((user) => user.email === email)) {
+      alert("User email already exists");
+      return;
+    }
+
+    users.push({ email, password });
+    localStorage.setItem("users", JSON.stringify(users));
+
+    localStorage.setItem("currentUser", email);
+
+    window.location.href = "/index.html";
+  });
+}
+
+if (signinForm) {
+  signinForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = signinEmailInput.value;
+    const password = singinPasswordInput.value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(
+      (user) => user.email === email && user.password === password
+    );
+    if (user) {
+      localStorage.setItem("currentUser", email);
+      window.location.href = "/index.html";
+    } else {
+      alert("Invalid email or password!");
+    }
+  });
+}
 
 if (addTripButton) {
   addTripButton.addEventListener("click", () => {
