@@ -1,7 +1,8 @@
 [
   {
     "id": 1,
-    "title": "Trip to New York",
+    "title": "Summer Vacation",
+    "location": "New York",
     "guests": ["Modesto", "Bradley", "Jasmine", "Abraham"],
     "expenses": [
       {
@@ -20,7 +21,8 @@
   },
   {
     "id": 2,
-    "title": "Trip to Mexico",
+    "title": "Weekend Getaway",
+    "location": "Mexico",
     "guests": ["Modesto", "Bradley", "Jasmine", "Abraham"],
     "expenses": [
       {
