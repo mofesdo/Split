@@ -1,10 +1,14 @@
 # Split - A vacation bill sharing app
 
-This app makes bill dividing easy. Just add in your expense along with who is spliting the bill. Then, you will get a total of what each person needs to pay. 
+This app makes bill dividing easy. Just add in your expense along with who is spliting the bill. Then, you will get a total of what each person needs to pay.
 
 ## Deployment link
 
 - [netlify](https://splitcodejam.netlify.app/)
+
+## Figma design
+
+- [figma](https://www.figma.com/design/MdtjLmfXHULzE8ugn7EQSf/Split?node-id=3-4&t=X3AsvLIx8xyrC6vO-0)
 
 **Intro**
 
