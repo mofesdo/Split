@@ -24,7 +24,6 @@ trip.expenses.forEach(exp => {
 // Populate guests in payer dropdown
 const payerSelect = document.getElementById("expense-payer");
 trip.guests.forEach(guest => {
-  console.log(guest);
   const option = document.createElement("option");
   option.value = guest;
   option.textContent = guest;
