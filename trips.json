@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Trip to New York",
+    "guests": ["Modesto", "Bradley", "Jasmine", "Abraham"],
+    "expenses": [
+      {
+        "name": "Hotel",
+        "cost": 1000,
+        "payer": "Modesto",
+        "friends": ["Bradley", "Jasmine"]
+      },
+      {
+        "name": "Uber",
+        "cost": 40,
+        "payer": "Bradley",
+        "friends": ["Modesto", "Jasmine"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Trip to Mexico",
+    "guests": ["Modesto", "Bradley", "Jasmine", "Abraham"],
+    "expenses": [
+      {
+        "name": "Parking",
+        "cost": 50,
+        "payer": "Modesto",
+        "friends": ["Bradley", "Jasmine"]
+      },
+      {
+        "name": "Food",
+        "cost": 100,
+        "payer": "Bradley",
+        "friends": ["Modesto", "Jasmine"]
+      },
+      {
+        "name": "Bar",
+        "cost": 120,
+        "payer": "Bradley",
+        "friends": ["Modesto", "Jasmine"]
+      }
+    ]
+  }
+]

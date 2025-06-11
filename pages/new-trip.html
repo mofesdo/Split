@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Trip</title>
+</head>
+<body>
+  <h1>Create Trip</h1>
+  <form id="tripForm">
+    <label>Trip Title: <input type="text" id="title" required></label><br>
+    <label>Guests (comma-separated): <input type="text" id="guests" required></label><br>
+    <button type="submit">Create Trip</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("tripForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const title = document.getElementById("title").value;
+      const guests = document.getElementById("guests").value.split(",").map(g => g.trim());
+      const trips = JSON.parse(localStorage.getItem("userTrips") || "[]");
+
+      const newTrip = {
+        id: Date.now(),
+        title,
+        guests,
+        expenses: []
+      };
+
+      trips.push(newTrip);
+      localStorage.setItem("userTrips", JSON.stringify(trips));
+
+      window.location.href = `scripts/trip.html?id=${newTrip.id}`;
+    });
+  </script>
+</body>
+</html>
