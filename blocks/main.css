@@ -22,6 +22,7 @@
   gap: 20px;
   flex: 1 0 auto; /* used for sticky footer to keep it at the bottom of the page */
   border-radius: 8px;
+  animation: fadeIn 0.6s ease-in-out, slideUp 0.6s ease-in-out;
 }
 
 .main_type_landing-page {
