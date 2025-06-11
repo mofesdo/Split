@@ -67,9 +67,7 @@ function calculateDebts(trip) {
 }
 
 const debts = calculateDebts(trip);
-const debtDiv = document.createElement("div");
-debtDiv.innerHTML = "<h2 class='main__expense_title'>Who Owes Whom</h2>";
-const main = document.querySelector("#main")
+const debtDiv = document.querySelector("#debts");
 
 Object.entries(debts).forEach(([debtor, creditors]) => {
   Object.entries(creditors).forEach(([creditor, amount]) => {
@@ -79,4 +77,3 @@ Object.entries(debts).forEach(([debtor, creditors]) => {
     debtDiv.appendChild(p);
   });
 });
-main.appendChild(debtDiv);
