@@ -46,26 +46,14 @@
               </div>
             </div>
             <h2 class="trip__title">Your Trips</h2>
-            <div class="trips__grid">
+
+            <template id="trip__card_template">
               <div class="trip__card">
-                <p class="trip__card_name">Name: Summer Vacation</p>
-                <p class="trip__card_location">Location: Hawaii</p>
+                <p class="trip__card_name">Name:</p>
+                <p class="trip__card_location">Location:</p>
               </div>
-              <div class="trip__card">
-                <p class="trip__card_name">Name: Family Reunion</p>
-                <p class="trip__card_location">Location: Wisconsin</p>
-              </div>
-              <div class="trip__card">
-                <p class="trip__card_name">Name: Christmas Holiday</p>
-                <p class="trip__card_location">Location: Chicago</p>
-              </div>
-              <template id="trip__card_template">
-                <div class="trip__card">
-                  <p class="trip__card_name">Name:</p>
-                  <p class="trip__card_location">Location:</p>
-                </div>
-              </template>
-            </div>
+            </template>
+
             <ul id="tripList" class="trip__list"></ul>
             <a href="pages/new-trip.html">Create New Trip</a>
           </section>
@@ -101,6 +89,16 @@
                 minlength="2"
                 maxlength="30"
                 placeholder="Enter the location"
+                class="modal__input"
+              />
+            </label>
+            <label for="trip-guests" class="modal__label">
+              Guests (comma-separated)
+              <input
+                id="trip-guests"
+                type="text"
+                required
+                placeholder="Enter Guests (Ex: Modesto,Abraham,etc)"
                 class="modal__input"
               />
             </label>

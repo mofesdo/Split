@@ -21,10 +21,33 @@ if (trips.length === 0) {
   renderTrips(trips);
 }
 
-/*             <div class="trip__card">
-                <p class="trip__card_name">Name: Christmas Holiday</p>
-                <p class="trip__card_location">Location: Chicago</p>
-              </div> */
+// Add Trip
+const form = document.getElementById("add-trip-form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const title = document.getElementById("trip-name").value;
+  const location = document.getElementById("trip-location").value;
+  const guests = document
+    .getElementById("trip-guests")
+    .value.split(",")
+    .map((g) => g.trim());
+  const trips = JSON.parse(localStorage.getItem("userTrips") || "[]");
+
+  const newTrip = {
+    id: Date.now(),
+    title,
+    location,
+    guests,
+    expenses: [],
+  };
+
+  trips.push(newTrip);
+  localStorage.setItem("userTrips", JSON.stringify(trips));
+
+  window.location.href = `pages/trip.html?id=${newTrip.id}`;
+});
+
 // Render function
 function renderTrips(trips) {
   tripList.innerHTML = "";
@@ -36,13 +59,13 @@ function renderTrips(trips) {
     name.className = "trip__card_name";
     name.textContent = "Name: " + trip.title;
     location.className = "trip__card_location";
-    location.textContent = "Location: "+ trip.location;
+    location.textContent = "Location: " + trip.location;
     const a = document.createElement("a");
-    a.className = "trip__card_link"
+    a.className = "trip__card_link";
     a.href = `pages/trip.html?id=${trip.id}`;
     li.appendChild(name);
     li.appendChild(location);
-    a.appendChild(li)
+    a.appendChild(li);
     tripList.appendChild(a);
   });
 }
