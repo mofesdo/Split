@@ -101,3 +101,7 @@
 .header__signin:hover {
   opacity: 0.7;
 }
+.header__container{
+  display: flex;
+  gap: 10px
+}
