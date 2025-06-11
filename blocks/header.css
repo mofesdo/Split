@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+.header__trip_title {
+  color: #2b2a2a;
+  font-size: 38px;
+  line-height: 1.5;
+}
+
 .header__logo {
   width: 40px;
   height: 40px;
