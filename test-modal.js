@@ -17,7 +17,8 @@ const signupButton = document.querySelector(".header__signup-button");
 const signinModal = document.querySelector("#signin-modal");
 const signinButton = document.querySelector(".header__signin-button");
 
-//selectors for trips section
+//selectors for dashboard section
+const dashboardUsername = document.querySelector(".header__user-name");
 const tripsGrid = document.querySelector(".trips__grid");
 const tripTemplate = document.querySelector("#trip__card_template");
 
@@ -26,10 +27,12 @@ const signupForm = document.querySelector("#signup-form");
 const signinForm = document.querySelector("#signin-form");
 const signupEmailInput = document.querySelector("#signup-email");
 const signupPasswordInput = document.querySelector("#signup-password");
+const signupNameInput = document.querySelector("#signup-name");
 const signinEmailInput = document.querySelector("#signin-email");
-const singinPasswordInput = document.querySelector("#signin-password");
+const signinPasswordInput = document.querySelector("#signin-password");
 const logoutButton = document.querySelector(".sidebar__logout-button");
 
+//selectors for adding expenses
 const addExpenseButton = document.querySelector("#addExpenseBtn");
 const addExpenseModal = document.querySelector("#add-expense-modal");
 const expenseNameInput = document.querySelector("#expense-name");
@@ -55,10 +58,12 @@ if (logoutButton) {
   logoutButton.addEventListener("click", signOut);
 }
 
+// logic for users signing up
 if (signupForm) {
   signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const username = signupNameInput.value;
     const email = signupEmailInput.value;
     const password = signupPasswordInput.value;
 
@@ -69,28 +74,29 @@ if (signupForm) {
       return;
     }
 
-    users.push({ email, password });
+    users.push({ username, email, password });
     localStorage.setItem("users", JSON.stringify(users));
 
-    localStorage.setItem("currentUser", email);
+    localStorage.setItem("currentUser", username);
 
     window.location.href = "/index.html";
   });
 }
 
+//logic for users signing in
 if (signinForm) {
   signinForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const email = signinEmailInput.value;
-    const password = singinPasswordInput.value;
+    const password = signinPasswordInput.value;
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
     const user = users.find(
       (user) => user.email === email && user.password === password
     );
     if (user) {
-      localStorage.setItem("currentUser", email);
+      localStorage.setItem("currentUser", user.username);
       window.location.href = "/index.html";
     } else {
       alert("Invalid email or password!");
