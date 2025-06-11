@@ -1,48 +1,63 @@
 .expense {
   display: flex;
   padding: 20px;
+  justify-content: space-between;
+  max-height: 58px;
 }
 
 .expense__column-one {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 300px;
-  gap: 16px;
+  gap: 9px;
 }
 
 .expense__column-two {
   display: flex;
   flex-direction: column;
-  width: 300px;
   align-items: flex-end;
-  gap: 10px;
+  gap: 9px;
+}
+
+.expense__form {
+  display: flex;
+  gap: 5px;
 }
 
 .expense__form-container {
   display: flex;
+  gap: 8px;
 }
 
-.expense__input-select {
-  width: 184px;
-}
 
-.expense__submit-button {
-  margin: 10px 0 0 115px;
+.buttons__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .expense__users-title {
   margin: 0;
+  font-size: 0.9rem;
 }
 
-.expense__add-user-button {
-  margin: 0 10px;
-  height: 29px;
+.expense__add-user-button,
+.expense__submit-button {
+  height: 20px;
   align-self: flex-end;
+  border-radius: 8px;
+  font-size: .7rem;
+  box-sizing: border-box;
+
+  border: solid .5px;
+  text-align: center;
+  display: inline-block;
+  width: 70px;
 }
 
 .expense__users {
   display: flex;
+
 }
 
 .expense__users-list {
@@ -51,16 +66,34 @@
   font-size: 24px;
   display: grid;
   gap: 5px;
+  grid-template-rows: repeat(2, minmax(13px, 1fr));
+  padding-left: 5px;
 }
 
 .expense__input {
   border-radius: 8px;
   border: 1px solid rgba(33, 33, 33, 0.4);
-  height: 30px;
-  box-sizing: border-box ;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  padding: 4px;
+  width: 150px;
+}
+
+.expense__input-select {
+  width: 150px;
+  height: 24.5px;
+  padding: 0;
+}
+
+.expense__label {
+  font-size: 0.8rem;
+}
+
+.expense__label option {
+  font-size: 0.8rem;
 }
 
 .added-user {
   display: flex;
-  align-items: center;
+  font-size: 0.8rem;
 }

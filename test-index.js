@@ -41,12 +41,14 @@ form.addEventListener("submit", (e) => {
         const template = getResultsElement();
         template.querySelector(".result-content").textContent = `${user} owes $${payPerPerson} for ${typeOfExpense.value} paid by ${payer.value}.`
         result.appendChild(template);
+        returnAddedUser(user);
     })
     
     
     console.log("Type of Expense: ", typeOfExpense)
     console.log("Payer: ", payer)
     console.log("Amount: ", amount)
+
 
     form.reset();
     deleteChild();
@@ -71,11 +73,6 @@ function getResultsElement() {
         .content
         .cloneNode(true)
 
-    const content = {
-        totalAmount: resultTemplate.querySelector(".result-title"),
-        extrapayer: resultTemplate.querySelector(".result-content")
-    }
-
     return resultTemplate;
 }
 
@@ -98,5 +95,18 @@ function removeAddedUser(user) {
             option.remove()
         }
     });
+}
+
+function returnAddedUser(user) {
+    const optionsTemplate = extraUsers.querySelector("#option-template")
+        .content
+        .cloneNode(true)
+
+    const option = optionsTemplate.querySelector("option")
+    
+    option.value = user;
+    option.textContent = user;
+
+    extraUsers.appendChild(option);
 }
 

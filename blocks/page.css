@@ -9,6 +9,7 @@
 
 .page_type_expenses {
   background-image: url(../images/expenses-background-min.jpg);
+  background-size: cover;
 }
 
 .page__content {
