@@ -44,5 +44,101 @@
         "friends": ["Modesto", "Jasmine"]
       }
     ]
+  },
+  {
+    "id": 3,
+    "title": "Ski Trip",
+    "location": "Aspen",
+    "guests": ["Modesto", "Bradley", "Jasmine", "Abraham"],
+    "expenses": [
+      {
+        "name": "Ski Lodge",
+        "cost": 800,
+        "payer": "Modesto",
+        "friends": ["Bradley", "Modesto", "Abraham"]
+      },
+      {
+        "name": "Ski Rentals",
+        "cost": 200,
+        "payer": "Jasmine",
+        "friends": ["Modesto"]
+      },
+      {
+        "name": "Dinner at Lodge",
+        "cost": 120,
+        "payer": "Bradley",
+        "friends": ["Modesto", "Jasmine"]
+      },
+      {
+        "name": "Snowmobile Tour",
+        "cost": 250,
+        "payer": "Abraham",
+        "friends": ["Jasmine", "Modesto"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "City Adventure",
+    "location": "Chicago",
+    "guests": ["Modesto", "Bradley", "Jasmine", "Abraham"],
+    "expenses": [
+      {
+        "name": "Concert Tickets",
+        "cost": 550,
+        "payer": "Jasmine",
+        "friends": ["Bradley", "Modesto", "Abraham"]
+      },
+      {
+        "name": "Taxi",
+        "cost": 60,
+        "payer": "Bradley",
+        "friends": ["Modesto", "Jasmine", "Abraham"]
+      },
+      {
+        "name": "Museum Entry",
+        "cost": 100,
+        "payer": "Abraham",
+        "friends": ["Modesto", "Jasmine"]
+      },
+      {
+        "name": "Pizza Dinner",
+        "cost": 90,
+        "payer": "Abraham",
+        "friends": ["Jasmine", "Bradley", "Modesto"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Beach Getaway",
+    "location": "Miami",
+    "guests": ["Modesto", "Bradley", "Jasmine", "Abraham"],
+    "expenses": [
+      {
+        "name": "Beach House Rental",
+        "cost": 1200,
+        "payer": "Jasmine",
+        "friends": ["Bradley", "Modesto", "Abraham"]
+      },
+      {
+        "name": "Dinner",
+        "cost": 150,
+        "payer": "Bradley",
+        "friends": ["Modesto", "Jasmine", "Abraham"]
+      },
+      {
+        "name": "Boat Tour",
+        "cost": 120,
+        "payer": "Abraham",
+        "friends": ["Jasmine", "Bradley"]
+      },
+      {
+        "name": "Snorkeling Gear",
+        "cost": 80,
+        "payer": "Modesto",
+        "friends": ["Abraham"]
+      }
+    ]
   }
 ]
