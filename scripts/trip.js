@@ -2,7 +2,7 @@
 const params = new URLSearchParams(window.location.search);
 const tripId = parseInt(params.get("id"));
 const trips = JSON.parse(localStorage.getItem("userTrips") || "[]");
-const trip = trips.find(t => t.id === tripId);
+const trip = trips.find(trip => trip.id === tripId);
 
 if (!trip) {
   document.body.innerHTML = "<p>Trip not found.</p>";
@@ -38,7 +38,7 @@ document.getElementById("add-expense-form").addEventListener("submit", function 
   const name = document.getElementById("expense-name").value;
   const cost = parseFloat(document.getElementById("expense-cost").value);
   const payer = document.getElementById("expense-payer").value;
-  const friends = document.getElementById("expense-guests").value.split(",").map(f => f.trim());
+  const friends = document.getElementById("expense-guests").value.split(",").map(friend => friend.trim());
 
   const newExpense = { name, cost, payer, friends };
 
@@ -46,3 +46,4 @@ document.getElementById("add-expense-form").addEventListener("submit", function 
   localStorage.setItem("userTrips", JSON.stringify(trips));
   location.reload(); // re-render page
 });
+

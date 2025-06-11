@@ -5,8 +5,8 @@
 .trips__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 80px;
+  align-items: flex-start;
+  padding-bottom: 10px;
   border-bottom: #3b3b3b solid 1px;
 } 
 
