@@ -12,13 +12,16 @@
         <header class="header">
           <h1 id="tripTitle"></h1>
           <div class="header__container">
-            <button type="button" class="sidebar__logout-button">
-              <a href="../index.html" class="sidebar__link">Home</a>
+            <a href="../index.html" class="sidebar__link">
+              <button type="button" class="sidebar__button">Home</button>
+            </a>
+            
+              
             </button>
             <button
               type="button"
               id="addExpenseBtn"
-              class="sidebar__logout-button"
+              class="sidebar__button"
             >
               Add Expense
             </button>
@@ -44,7 +47,7 @@
               required
               minlength="2"
               maxlength="30"
-              placeholder="Enter trip name"
+              placeholder="Enter expense name"
               class="modal__input"
             />
           </label>
