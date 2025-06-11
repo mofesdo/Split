@@ -12,9 +12,9 @@ Starting with the landing page, you can either sign in or create an account. A l
 
 **Features**
 
-- 
-- 
-- 
+- Smooth transitions on modals and buttons
+- Semantic HTML5
+- JavaScript
 
 **Snippets**
 

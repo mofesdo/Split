@@ -1,6 +1,5 @@
 .page {
   font-family: "Athiti", "Helvetica Neue", Arial, sans-serif;
-  background-color: wheat;
   background-image: url(../images/jakub-zerdzicki-heiYgqp0Tsk-unsplash\ 1.svg);
   background-position: center;
   background-size: cover;
@@ -8,7 +7,7 @@
 }
 
 .page_type_expenses {
-  background-image: url(../images/expenses-background-min.jpg);
+  background-image: url(../images/engin-akyurt-i1usesgeC-A-unsplash\ 1.svg);
   background-size: cover;
 }
 
