@@ -47,3 +47,37 @@ document.getElementById("add-expense-form").addEventListener("submit", function 
   location.reload(); // re-render page
 });
 
+function calculateDebts(trip) {
+  const debts = {}; // { debtor: { creditor: amount } }
+
+  trip.expenses.forEach(exp => {
+    const { cost, payer, friends } = exp;
+    const share = cost / friends.length;
+
+    friends.forEach(friend => {
+      if (friend === payer) return; // skip if payer paid for themselves
+
+      if (!debts[friend]) debts[friend] = {};
+      if (!debts[friend][payer]) debts[friend][payer] = 0;
+
+      debts[friend][payer] += share;
+    });
+  });
+
+  return debts;
+}
+
+const debts = calculateDebts(trip);
+const debtDiv = document.createElement("div");
+debtDiv.innerHTML = "<h2 class='main__expense_title'>Who Owes Whom</h2>";
+const main = document.querySelector("#main")
+
+Object.entries(debts).forEach(([debtor, creditors]) => {
+  Object.entries(creditors).forEach(([creditor, amount]) => {
+    const p = document.createElement("p");
+    p.className = "main__text";
+    p.textContent = `${debtor} owes ${creditor} $${amount.toFixed(2)}`;
+    debtDiv.appendChild(p);
+  });
+});
+main.appendChild(debtDiv);
