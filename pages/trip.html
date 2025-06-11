@@ -1,22 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Trip Details</title>
-</head>
-<body>
-  <h1 id="tripTitle"></h1>
-  <h2>Expenses</h2>
-  <ul id="expensesList"></ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip Details</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="page page_type_expenses">
+      <div class="page__content">
+        <header class="header">
+          <h1 id="tripTitle"></h1>
+          <div class="header__container">
+            <button type="button" class="sidebar__logout-button">
+              <a href="/" class="sidebar__link">Home</a>
+            </button>
+            <button
+              type="button"
+              id="addExpenseBtn"
+              class="sidebar__logout-button"
+            >
+              Add Expense
+            </button>
+          </div>
+        </header>
+        <main class="main main_type_expenses">
+          <h2>Expenses</h2>
+        </main>
+      </div>
+    </div>
 
-  <h3>Add Expense</h3>
-  <form id="expenseForm">
-    <label>Name: <input type="text" id="name" required></label><br>
-    <label>Cost: <input type="number" id="cost" required></label><br>
-    <label>Payer: <select id="payer"></select></label><br>
-    <label>Friends involved (comma-separated): <input type="text" id="friends" required></label><br>
-    <button type="submit">Add Expense</button>
-  </form>
+    <ul id="expensesList"></ul>
 
-  <script src="../scripts/trip.js"></script>
-</body>
+    <h3>Add Expense</h3>
+    <form id="expenseForm">
+      <label>Name: <input type="text" id="name" required /></label><br />
+      <label>Cost: <input type="number" id="cost" required /></label><br />
+      <label
+        >Payer:
+        <select id="payer"></select></label
+      ><br />
+      <label
+        >Friends involved (comma-separated):
+        <input type="text" id="friends" required /></label
+      ><br />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <div class="modal" id="add-expense-modal">
+      <div class="modal__container">
+        <button class="modal__close-button" type="button"></button>
+        <h2 class="modal__title">Add new expense</h2>
+        <form class="modal__form" id="add-expense-form">
+          <label for="expense-name" class="modal__label">
+            Name
+            <input
+              id="expense-name"
+              type="text"
+              required
+              minlength="2"
+              maxlength="30"
+              placeholder="Enter trip name"
+              class="modal__input"
+            />
+          </label>
+          <label for="expense-cost" class="modal__label">
+            Cost:
+            <input
+              id="expense-cost"
+              type="number"
+              required
+              placeholder="Enter the cost"
+              class="modal__input"
+            />
+          </label>
+          <label class="modal__label"
+            >Payer:
+            <select id="expense-payer" class="modal__input"></select
+          ></label>
+          <label for="expense-guests" class="modal__label">
+            Friends involved (comma-separated):
+            <input
+              id="expense-guests"
+              type="text"
+              required
+              placeholder="Enter guests (Ex: Modesto,Abraham,etc)"
+              class="modal__input"
+            />
+          </label>
+          <button class="modal__submit-button" type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../scripts/trip.js"></script>
+    <script src="../test-modal.js"></script>
+  </body>
 </html>

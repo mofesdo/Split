@@ -30,6 +30,12 @@ const signinEmailInput = document.querySelector("#signin-email");
 const singinPasswordInput = document.querySelector("#signin-password");
 const logoutButton = document.querySelector(".sidebar__logout-button");
 
+const addExpenseButton = document.querySelector("#addExpenseBtn");
+const addExpenseModal = document.querySelector("#add-expense-modal");
+const expenseNameInput = document.querySelector("#expense-name");
+const expenseCostInput = document.querySelector("#expense-cost");
+const addExpenseForm = document.forms["add-expense-form"];
+
 const openModal = (modal) => {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", escapeModal);
@@ -110,6 +116,11 @@ if (signinButton) {
   });
 }
 
+if (addExpenseButton) {
+  addExpenseButton.addEventListener("click", () => {
+    openModal(addExpenseModal);
+  });
+}
 //submit function for adding a new trip to trips list
 const handleAddTripSubmit = (e) => {
   e.preventDefault();

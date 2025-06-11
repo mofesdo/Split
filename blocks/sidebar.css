@@ -38,3 +38,7 @@
   border-right: 1px solid black;
   flex-grow: 1;
 }
+.sidebar__link{
+  text-decoration: none;
+  color: white;
+}

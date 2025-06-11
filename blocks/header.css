@@ -1,10 +1,10 @@
 .header {
-  
   padding: 20px;
   text-align: center;
   /* font-family: 'Athiti', 'Helvetica Neue', Arial, sans-serif; */
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
