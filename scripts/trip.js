@@ -9,7 +9,10 @@ if (!trip) {
   throw new Error("Trip not found");
 }
 
-document.getElementById("tripTitle").textContent = trip.title;
+const totalCost = trip.expenses.reduce((sum, exp) => sum + exp.cost, 0);
+
+// Update header with trip title and total cost
+document.getElementById("tripTitle").textContent = `${trip.title} (Total: $${totalCost.toFixed(2)})`;
 
 const ul = document.getElementById("expensesList");
 trip.expenses.forEach(exp => {

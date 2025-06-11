@@ -25,27 +25,11 @@
           </div>
         </header>
         <main class="main main_type_expenses">
-          <h2>Expenses</h2>
+          <h2 class="">Expenses</h2>
+          <ul id="expensesList"></ul>
         </main>
       </div>
     </div>
-
-    <ul id="expensesList"></ul>
-
-    <h3>Add Expense</h3>
-    <form id="expenseForm">
-      <label>Name: <input type="text" id="name" required /></label><br />
-      <label>Cost: <input type="number" id="cost" required /></label><br />
-      <label
-        >Payer:
-        <select id="payer"></select></label
-      ><br />
-      <label
-        >Friends involved (comma-separated):
-        <input type="text" id="friends" required /></label
-      ><br />
-      <button type="submit">Add Expense</button>
-    </form>
 
     <div class="modal" id="add-expense-modal">
       <div class="modal__container">
