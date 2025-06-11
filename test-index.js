@@ -12,12 +12,6 @@ const amount = form.elements["amount"]
 
 let userListArray = []
 
-
-
-// payer = prompt("Who is paying? (Modesto, Ace, Bradley, Jasmine)")
-
-// amount = prompt("What is the amount? (in dollars)")
-
 addUser.addEventListener("click", (e) => {
     e.preventDefault()
     console.log("Adding user...")
@@ -30,7 +24,8 @@ addUser.addEventListener("click", (e) => {
 
     userList.appendChild(addedUserTemplate)
     userListArray.push(extraUsers.value)
-    console.log("User List Array: ", userListArray) 
+    console.log("User List Array: ", userListArray)
+    removeAddedUser(extraUsers.value); 
 })
 
 form.addEventListener("submit", (e) => {
@@ -95,3 +90,13 @@ function calculateExpenses() {
 
     return eachUserAmount.toFixed(2);
 }
+
+function removeAddedUser(user) {
+    const extraUsersList = extraUsers.querySelectorAll("option");
+    extraUsersList.forEach(option => {
+        if(option.value == user) {
+            option.remove()
+        }
+    });
+}
+
