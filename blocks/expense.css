@@ -49,6 +49,18 @@
   list-style-type: none;
   margin: 0;
   font-size: 24px;
+  display: grid;
+  gap: 5px;
+}
+
+.expense__input {
+  border-radius: 8px;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  height: 30px;
+  box-sizing: border-box ;
+}
+
+.added-user {
   display: flex;
-  gap: 20px;
+  align-items: center;
 }
