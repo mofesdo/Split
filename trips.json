@@ -78,7 +78,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "City Adventure",
     "location": "Chicago",
     "guests": ["Modesto", "Bradley", "Jasmine", "Abraham"],
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 5,
     "title": "Beach Getaway",
     "location": "Miami",
     "guests": ["Modesto", "Bradley", "Jasmine", "Abraham"],
