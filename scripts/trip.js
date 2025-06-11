@@ -29,13 +29,13 @@ trip.guests.forEach(guest => {
 });
 
 // Handle adding new expense
-document.getElementById("expenseForm").addEventListener("submit", function (e) {
+document.getElementById("add-expense-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const cost = parseFloat(document.getElementById("cost").value);
-  const payer = document.getElementById("payer").value;
-  const friends = document.getElementById("friends").value.split(",").map(f => f.trim());
+  const name = document.getElementById("expense-name").value;
+  const cost = parseFloat(document.getElementById("expense-cost").value);
+  const payer = document.getElementById("expense-payer").value;
+  const friends = document.getElementById("expense-guests").value.split(",").map(f => f.trim());
 
   const newExpense = { name, cost, payer, friends };
 
