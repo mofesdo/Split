@@ -12,12 +12,6 @@ const amount = form.elements["amount"]
 
 let userListArray = []
 
-
-
-// payer = prompt("Who is paying? (Modesto, Ace, Bradley, Jasmine)")
-
-// amount = prompt("What is the amount? (in dollars)")
-
 addUser.addEventListener("click", (e) => {
     e.preventDefault()
     console.log("Adding user...")
@@ -30,7 +24,8 @@ addUser.addEventListener("click", (e) => {
 
     userList.appendChild(addedUserTemplate)
     userListArray.push(extraUsers.value)
-    console.log("User List Array: ", userListArray) 
+    console.log("User List Array: ", userListArray)
+    removeAddedUser(extraUsers.value); 
 })
 
 form.addEventListener("submit", (e) => {
@@ -46,12 +41,14 @@ form.addEventListener("submit", (e) => {
         const template = getResultsElement();
         template.querySelector(".result-content").textContent = `${user} owes $${payPerPerson} for ${typeOfExpense.value} paid by ${payer.value}.`
         result.appendChild(template);
+        returnAddedUser(user);
     })
     
     
     console.log("Type of Expense: ", typeOfExpense)
     console.log("Payer: ", payer)
     console.log("Amount: ", amount)
+
 
     form.reset();
     deleteChild();
@@ -76,11 +73,6 @@ function getResultsElement() {
         .content
         .cloneNode(true)
 
-    const content = {
-        totalAmount: resultTemplate.querySelector(".result-title"),
-        extrapayer: resultTemplate.querySelector(".result-content")
-    }
-
     return resultTemplate;
 }
 
@@ -95,3 +87,26 @@ function calculateExpenses() {
 
     return eachUserAmount.toFixed(2);
 }
+
+function removeAddedUser(user) {
+    const extraUsersList = extraUsers.querySelectorAll("option");
+    extraUsersList.forEach(option => {
+        if(option.value == user) {
+            option.remove()
+        }
+    });
+}
+
+function returnAddedUser(user) {
+    const optionsTemplate = extraUsers.querySelector("#option-template")
+        .content
+        .cloneNode(true)
+
+    const option = optionsTemplate.querySelector("option")
+    
+    option.value = user;
+    option.textContent = user;
+
+    extraUsers.appendChild(option);
+}
+

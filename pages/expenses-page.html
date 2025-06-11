@@ -52,6 +52,7 @@
                       <option value="Modesto">Modesto</option>
                       <option value="Jasmine">Jasmine</option>
                       <option value="Bradley">Bradley</option>
+                      
                     </select>
                   </label>
 
@@ -67,20 +68,25 @@
                       <option value="Modesto">Modesto</option>
                       <option value="Jasmine">Jasmine</option>
                       <option value="Bradley">Bradley</option>
+                      <template id="option-template">
+                        <option value=""></option>
+                      </template>
                     </select>
                   </label>
                 </div>
+              </div>
+              <div class="buttons__container">
+                <button class="expense__submit-button" type="submit">
+                  Calculate
+                </button>
                 <button
-                  class="expense__add-user-button"
-                  type="button"
-                  id="adduser"
-                >
-                  Add User
+                    class="expense__add-user-button"
+                    type="button"
+                    id="adduser"
+                  >
+                    Add User
                 </button>
               </div>
-              <button class="expense__submit-button" type="submit">
-                Submit
-              </button>
             </form>
             <div class="expense__users" id="user-list">
               <h3 class="expense__users-title">Who else pays:</h3>
